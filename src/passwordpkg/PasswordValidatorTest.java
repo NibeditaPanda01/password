@@ -25,8 +25,8 @@ public class PasswordValidatorTest {
     static Stream<String> validPasswordProvider() {
         return Stream.of(
                 "Nibedita@123",
-                "123Nibedita",
-                "Nibedit9" // Testcase should fail as length is 8 char long instead of larger than 8
+                "123Nibedita"
+                //,"Nibedit9" // Testcase should fail as length is 8 char long instead of larger than 8
         );
     }
 
@@ -45,7 +45,7 @@ public class PasswordValidatorTest {
                 "ABC$$$$$$",                // invalid, at least one digit
                 "12345678",                 // length larger than 8
                 " ",                        //empty
-                "",                         //empty
-                "Nibedita1");               // Valid Value, testcase should fail
+                "");                      //empty
+                //"Nibedita1");               // Valid Value, testcase should fail
     }
 }
